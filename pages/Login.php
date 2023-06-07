@@ -116,7 +116,7 @@
                     <div class="input-group">
                         <div class="input-field" id="name">
                             <i class="fa-solid fa-user"></i>
-                            <input name='username' type="text" placeholder="Name" required>
+                            <input name='username' type="text" placeholder="Name Test" required>
                         </div>
                         <div class="input-field" id="email">
                             <i class="fa-solid fa-envelope"></i>
