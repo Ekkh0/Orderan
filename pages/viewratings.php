@@ -74,7 +74,7 @@
             <?php
                 $d=mysqli_query($conn, "SELECT * FROM orderheader oh JOIN shop s ON oh.ShopID=s.ShopID WHERE oh.ShopID LIKE '".$_SESSION['ratingtosee']."'");
 
-                $rating=mysqli_query($conn, "SELECT AVG(RatingScore) as averagescore FROM orderheader od JOIN shop s ON od.ShopID=s.ShopID WHERE s.ShopID LIKE '".$_SESSION['ratingtosee']."' AND OrderStatus=2")->fetch_assoc()['averagescore'];
+                $rating=mysqli_query($conn, "SELECT AVG(RatingScore) as averagescore FROM orderheader od JOIN shop s ON od.ShopID=s.ShopID WHERE s.ShopID LIKE '".$_SESSION['ratingtosee']."' AND OrderStatus=3")->fetch_assoc()['averagescore'];
 
                 
                 if(mysqli_num_rows($d)!=null){
