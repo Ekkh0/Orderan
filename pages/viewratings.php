@@ -92,7 +92,7 @@
                     echo '</div>';
                     echo '</div>';
     
-                    $query=mysqli_query($conn, "SELECT * FROM orderheader od JOIN user u ON od.CustomerID=u.UserID WHERE ShopID LIKE '".$_SESSION['ratingtosee']."' AND OrderStatus=2 ORDER BY OrderID DESC");
+                    $query=mysqli_query($conn, "SELECT * FROM orderheader od JOIN user u ON od.CustomerID=u.UserID WHERE ShopID LIKE '".$_SESSION['ratingtosee']."' AND OrderStatus=3 ORDER BY OrderID DESC");
                     
                     while($d=$query->fetch_assoc()){
                         $stars = number_format($d['RatingScore'], 0, '.', '');
