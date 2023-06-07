@@ -136,11 +136,11 @@
                     }
                     
                     echo '<div id="pricenrate">'.$total;
-                    if($d['OrderStatus']==2 AND $d['RatingScore']==0){
+                    if($d['OrderStatus']==3 AND $d['RatingScore']==0){
                         echo '<form method="post">';
                         echo '<button type="submit" name="rate" value="'.$d['OrderID'].'">Rate</button>';
                         echo '</form>';
-                    }else if($d['OrderStatus']==2 AND $d['RatingScore']!=0){
+                    }else if($d['OrderStatus']==3 AND $d['RatingScore']!=0){
                         echo '<span>Rated: '.$d['RatingScore'];
                         echo '</span>';
                     }
