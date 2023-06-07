@@ -21,7 +21,7 @@
     }
 
     if(isset($_POST['finishorder'])){
-        $query=mysqli_query($conn, "UPDATE orderheader SET OrderStatus=2 WHERE OrderID LIKE '".$_SESSION['vieworderid']."'");
+        $query=mysqli_query($conn, "UPDATE orderheader SET OrderStatus=2, PickupperID=17 WHERE OrderID LIKE '".$_SESSION['vieworderid']."'");
 
         unset($_SESSION['vieworderid']);
         header("Location: Tenant.php");

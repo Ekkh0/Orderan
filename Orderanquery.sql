@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2023 at 01:31 PM
+-- Generation Time: Jun 07, 2023 at 03:41 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -156,7 +156,7 @@ CREATE TABLE `orderheader` (
   `OrderID` int(11) NOT NULL,
   `ShopID` int(11) NOT NULL,
   `CustomerID` int(11) NOT NULL,
-  `PickupperID` int(10) NOT NULL,
+  `PickupperID` int(10) DEFAULT NULL,
   `Alamat` varchar(255) NOT NULL,
   `OrderDate` datetime NOT NULL,
   `OrderStatus` int(11) NOT NULL,
@@ -180,7 +180,7 @@ INSERT INTO `orderheader` (`OrderID`, `ShopID`, `CustomerID`, `PickupperID`, `Al
 (9, 5, 14, 17, 'C1101', '2022-11-16 14:21:41', 2, 5, 'Perfekkk no fek fek'),
 (10, 5, 5, 17, 'B1002', '2022-11-16 14:32:06', 2, 4.5, 'Enak'),
 (11, 3, 5, 17, 'Ruang C0502', '2022-11-16 14:32:38', 2, 3.9, 'Biasa aja'),
-(12, 1, 5, 17, 'Ruang C0301', '2022-11-16 14:33:10', 1, 0, '');
+(12, 1, 5, 17, 'Ruang C0301', '2022-11-16 14:33:10', 2, 0, '');
 
 -- --------------------------------------------------------
 
@@ -373,7 +373,7 @@ ALTER TABLE `item`
 -- AUTO_INCREMENT for table `orderheader`
 --
 ALTER TABLE `orderheader`
-  MODIFY `OrderID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `OrderID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `role`
