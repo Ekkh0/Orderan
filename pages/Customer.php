@@ -117,7 +117,7 @@
                 JOIN category c ON sc.CategoryID=c.CategoryID
                 WHERE s.ShopID=".$d['ShopID']);
 
-                $rating=mysqli_query($conn, "SELECT TRUNCATE(AVG(RatingScore), 1) as averagescore FROM orderheader od JOIN shop s ON od.ShopID=s.ShopID WHERE s.ShopID LIKE '".$d['ShopID']."' AND OrderStatus=2 AND RatingScore!=0")->fetch_assoc()['averagescore'];
+                $rating=mysqli_query($conn, "SELECT TRUNCATE(AVG(RatingScore), 1) as averagescore FROM orderheader od JOIN shop s ON od.ShopID=s.ShopID WHERE s.ShopID LIKE '".$d['ShopID']."' AND OrderStatus=3 AND RatingScore!=0")->fetch_assoc()['averagescore'];
 
                 echo '<div id="shops">'.
                 '<div id="shoppiccontainer"><img id="shoppic" src="../shoppictures/'.$d['ShopID'].'.png" alt="LOGO"></div>';
