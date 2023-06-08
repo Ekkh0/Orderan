@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2023 at 03:41 PM
+-- Generation Time: Jun 08, 2023 at 05:01 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -144,7 +144,11 @@ INSERT INTO `orderdetail` (`OrderID`, `ItemID`, `Quantity`, `Note`) VALUES
 (12, 1, 1, ''),
 (12, 2, 1, ''),
 (12, 5, 2, ''),
-(12, 6, 4, '');
+(12, 6, 4, ''),
+(15, 1, 3, ''),
+(15, 2, 3, ''),
+(15, 3, 3, ''),
+(15, 5, 3, '');
 
 -- --------------------------------------------------------
 
@@ -170,17 +174,18 @@ CREATE TABLE `orderheader` (
 
 INSERT INTO `orderheader` (`OrderID`, `ShopID`, `CustomerID`, `PickupperID`, `Alamat`, `OrderDate`, `OrderStatus`, `RatingScore`, `RatingComment`) VALUES
 (1, 1, 5, 17, 'ruang c1102', '2022-11-14 10:25:34', 3, 4.5, 'Bakminya Wuenak'),
-(2, 1, 5, 17, 'Ruang A1803', '2022-11-15 06:45:26', 2, 4.2, 'Ga bosen bosen'),
-(3, 3, 10, 17, 'Ruang A0203', '2022-11-16 14:16:26', 2, 3.7, 'Biasa aja'),
-(4, 4, 10, 17, 'Ruang B0502', '2022-11-16 14:17:02', 2, 4, ''),
+(2, 1, 5, 17, 'Ruang A1803', '2022-11-15 06:45:26', 3, 4.2, 'Ga bosen bosen'),
+(3, 3, 10, 17, 'Ruang A0203', '2022-11-16 14:16:26', 3, 3.7, 'Biasa aja'),
+(4, 4, 10, 17, 'Ruang B0502', '2022-11-16 14:17:02', 3, 4, ''),
 (5, 2, 11, 17, 'Perpus', '2022-11-16 14:17:32', 3, 4.7, 'MANTAPPPPPPPPPPPPPP'),
-(6, 5, 12, 17, 'Antar ke GOR', '2022-11-16 14:18:38', 2, 4.9, 'Bikin nagih'),
-(7, 4, 12, 17, 'GOR', '2022-11-16 14:19:43', 2, 4.4, 'Enak banget'),
-(8, 1, 14, 17, 'Ruang B0305', '2022-11-16 14:21:10', 2, 2.78, 'Ga begitu enak'),
-(9, 5, 14, 17, 'C1101', '2022-11-16 14:21:41', 2, 5, 'Perfekkk no fek fek'),
-(10, 5, 5, 17, 'B1002', '2022-11-16 14:32:06', 2, 4.5, 'Enak'),
-(11, 3, 5, 17, 'Ruang C0502', '2022-11-16 14:32:38', 2, 3.9, 'Biasa aja'),
-(12, 1, 5, 17, 'Ruang C0301', '2022-11-16 14:33:10', 2, 0, '');
+(6, 5, 12, 17, 'Antar ke GOR', '2022-11-16 14:18:38', 3, 4.9, 'Bikin nagih'),
+(7, 4, 12, 17, 'GOR', '2022-11-16 14:19:43', 3, 4.4, 'Enak banget'),
+(8, 1, 14, 17, 'Ruang B0305', '2022-11-16 14:21:10', 3, 2.78, 'Ga begitu enak'),
+(9, 5, 14, 17, 'C1101', '2022-11-16 14:21:41', 3, 5, 'Perfekkk no fek fek'),
+(10, 5, 5, 17, 'B1002', '2022-11-16 14:32:06', 3, 4.5, 'Enak'),
+(11, 3, 5, 17, 'Ruang C0502', '2022-11-16 14:32:38', 3, 3.9, 'Biasa aja'),
+(12, 1, 5, 17, 'Ruang C0301', '2022-11-16 14:33:10', 1, 0, ''),
+(15, 1, 18, NULL, 'Atrium', '2023-06-08 09:55:27', 1, 0, '');
 
 -- --------------------------------------------------------
 
@@ -291,7 +296,7 @@ INSERT INTO `user` (`UserID`, `UserEmail`, `UserUsername`, `UserPassword`, `User
 (15, 'Feli@terserah.co.id', 'Feliiiiiiiiiii', '$2y$10$qdHIGNoLU53bX7hWWV9RXO1kK4xn/d7K6roYa94ybs5Oc6yGCxrpq', '+1234901745221', 2),
 (16, 'SiapaAjaDah@IniItu.Sini.Situ', 'Customer Misterius', '$2y$10$zXnrClodr6vxDJpGSiueK.YOIgsfl/KaQ34pUZoHMMWfl8oD2j8E.', '+12591750215890', 2),
 (17, 'pickup@test.com', 'pickupper', '12345', '082123123929', 5),
-(18, 'test@test.com', 'dummybuyerA', '$2y$10$PbZL79MJuVXBM.IE9V7mmuz9wemvCIFhf911qim1DsiOaPrEiVEvC', '08123120371283', 2);
+(18, 'adsopajds@test.com', 'abcdefg', '$2y$10$2CYNwJuJ4mNodLzAkbueZOjn5DdoOCpE.SqoqiaaYd3kWfdYChuzS', '0812345678', 2);
 
 --
 -- Indexes for dumped tables
@@ -373,7 +378,7 @@ ALTER TABLE `item`
 -- AUTO_INCREMENT for table `orderheader`
 --
 ALTER TABLE `orderheader`
-  MODIFY `OrderID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `OrderID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `role`
